@@ -1,0 +1,9 @@
+index
+senhas
+header
+upload
+home
+update
+server-status
+backup
+submit
