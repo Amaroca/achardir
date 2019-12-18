@@ -1,0 +1,34 @@
+# achardir
+utilitário em bash para encontrar diretórios de um determinado dominio
+Script é desenvolvido em Bash, e tem por objetivo varrer um dominio, trazendo os diretórios e arquivos disponiveis.
+
+######################## MODO DE USO ############################33
+Na sua forma padrão:
+  ex: ./achardir.sh dominio.com.br
+  Nesse caso especifico, teremos a sua execução padrão, onde as 3 wordilists disponiveis por padrão, serão utilizadas.
+  A observação é que nessa forma, o tempo não é o importante, pois levará muito tempo até finalizar a consulta, levando em conta
+  que as 3 wordlists são bem grandes, porém, o resultado é excelente
+############# COMO O SCRIPT FAZ A CONSULTA ###########
+
+############ Primeira forma de uso ######
+1 - No inicio é feito uma consulta na wordlist de diretorios,e na wl de extensões, sendo usada juntamente com o dominio. E através do Curl em sua forma
+    silenciosa, é trazido o status_code, caso seja diferente de 404, no caso do diretório, ele retornará o nome com sucesso.
+2 - Depois é feito uma consulta na wordlist de arquivos, e juntamente com o dominio, dominio/arquivo e com uso do curl é trazido
+    a resposta com o status_code.
+3 - Em uma terceira consulta, é feita uma leitura na wl dos diretorios, concatenando com os arquivos e com a wl de extensoes, trazendo
+    o resultado como nos exemplos acima.
+Por isso a demora nas consultas.
+
+########### Segundo Modo ##############
+1 - Você pode optar por usar suas próprias wordlist, a observação é que se for usar uma terá que usar as 3, uma pra diretorios, uma pra
+    arquivos e outra para extensões, podendo aproveitar as ja disponiveis já no sistema.
+    ex: ./achardir dominio.com.br dir.txt /usr/share/dirb/wordlist/common.txt ext.txt
+2 - a busca é semelhante a primeira forma de uso.
+
+OBS: Algo a ser observado é que mesmo o dominio tendo sido configurado para alguns tipos de consultas por scripts, provavelmente este
+nosso script irá funcionar.
+
+############### SOBRE A WORDLIST ##########
+Como foi falado acima, se usar a forma padrão do script, levará com certeza não minutos, mas horas até finalizar toda a consulta.
+Mas com certeza irá ter um ótimo resultado, mas se quiser algo mais rápido, crie sua propria wordlist, talvez seja mais rapido o resultado,
+porém sem muitas novidades.
