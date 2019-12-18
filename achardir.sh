@@ -14,7 +14,8 @@ echo "[+]  Ex1: ./recondomain dominio.com.br "
 echo "[+]  Caso queira usar uma wordlist propria pode fazer como no exemplo usando duas"
 echo "     uma para diretorios e outra para tipo de arquivo"
 echo "[+]  Ex2: ./recondomain site.com.br diretorios.txt arquivos.txt ext.txt"
-sleep 3
+echo "OBS: NA FORMA PADRÂO VAI DEMORAR HORAS, A WORDLIST E BEM GRANDE !!!"
+sleep 5
 echo " "
 echo "Iniciando a coleta de diretorios ..."
 echo "############ Diretorios Encontrados ##################"
@@ -22,7 +23,7 @@ echo "############ Diretorios Encontrados ##################"
 if [ "$2" == "" ]; then 
 	for dir in $(cat dir.txt)
 	do
-		resposta=$(curl -H "User-Agent: Amaraltool" -s -o /dev/null -w "%{http_code}" "$1"/"$dir")
+		resposta=$(curl -H "User-Agent: faciltechtool" -s -o /dev/null -w "%{http_code}" "$1"/"$dir")
 		if [ "$resposta" != "404" ];
 		then
 			echo "Diretorio encontrado =>  $dir [$resposta]"
@@ -34,7 +35,7 @@ if [ "$2" == "" ]; then
 	do
 		for ext in $(cat ext.txt)
 		do
-			resp=$(curl -H "User-Agent: Amaraltool" -s -o /dev/null -w "%{http_code}" "$1"/"$arq""$ext")
+			resp=$(curl -H "User-Agent: faciltechtool" -s -o /dev/null -w "%{http_code}" "$1"/"$arq""$ext")
 			#echo "$1"/"$arq$ext = $resp"
 			if [ "$resp" != "404" ] && [ "$resp" != "403" ];
 			then
@@ -48,7 +49,7 @@ if [ "$2" == "" ]; then
                 do
                         for ext in $(cat ext.txt)
                         do
-                                resp=$(curl -H "User-Agent: Amaraltool" -s -o /dev/null -w "%{http_code}" "$1"/"$dir"/"$arq""$ext")
+                                resp=$(curl -H "User-Agent: faciltechtool" -s -o /dev/null -w "%{http_code}" "$1"/"$dir"/"$arq""$ext")
                                 #echo "$1"/"$dir"/"$arq$ext = $resp"
                                 if [ "$resp" != "404" ] && [ "$resp" != "403" ];
                                 then
@@ -61,7 +62,7 @@ if [ "$2" == "" ]; then
 else
 	for dir in $(cat $2)
         do
-                resposta=$(curl -H "User-Agent: Amaraltool" -s -o /dev/null -w "%{http_code}" "$1"/"$dir")
+                resposta=$(curl -H "User-Agent: faciltechtool" -s -o /dev/null -w "%{http_code}" "$1"/"$dir")
                 if [ "$resposta" != "404" ];
                 then
                         echo "Diretorio encontrado =>  $dir [$resposta]"
@@ -73,7 +74,7 @@ else
         do
                 for ext in $(cat $4)
                 do
-                        resp=$(curl -H "User-Agent: Amaraltool" -s -o /dev/null -w "%{http_code}" "$1"/"$arq""$ext")
+                        resp=$(curl -H "User-Agent: faciltechtool" -s -o /dev/null -w "%{http_code}" "$1"/"$arq""$ext")
                         #echo "$1"/"$arq$ext = $resp"
                         if [ "$resp" != "404" ] && [ "$resp" != "403" ];
                         then
@@ -89,7 +90,7 @@ else
 		do
                 	for ext in $(cat ext.txt)
                 	do
-                        	resp=$(curl -H "User-Agent: Amaraltool" -s -o /dev/null -w "%{http_code}" "$1"/"$dir"/"$arq""$ext")
+                        	resp=$(curl -H "User-Agent: faciltechtool" -s -o /dev/null -w "%{http_code}" "$1"/"$dir"/"$arq""$ext")
                         	#echo "$1"/"$dir"/"$arq$ext = $resp"
                         	if [ "$resp" != "404" ] && [ "$resp" != "403" ];
                         	then
