@@ -1,6 +1,0 @@
-upload
-uploads
-home
-db
-server-status
-prog
