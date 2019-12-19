@@ -5,6 +5,13 @@ echo "  / /_  / /| |/ /    / // /   / / / __/ / /   / /_/ / ";
 echo " / __/ / ___ / /____/ // /___/ / / /___/ /___/ __  /  ";
 echo "/_/   /_/  |_\____/___/_____/_/ /_____/\____/_/ /_/   ";
 echo "                                                      ";
+if [ "$1" == "" ];
+then
+echo "Use o script da seguinte forma: "
+echo "Ex: ./achardir.sh dominio.com.br"
+echo "Ex2: ./achardir.sh dominio.com.br dir.txt arq.txt"
+
+else
 
 echo " #######################################################"
 echo "$(tput setaf 3)" "$(tput blink)" "########## Eduardo Amaral ##############" "$(tput sgr0)"
@@ -133,3 +140,4 @@ fi
 echo "########################################################"
 echo "#################### FIM DA CONSULTA ###################"
 echo "########################################################"
+fi
