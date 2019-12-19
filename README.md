@@ -32,5 +32,5 @@ Script é desenvolvido em Bash, e tem por objetivo varrer um dominio, trazendo o
 nosso script irá funcionar.</spam>
 
 <h2>############### SOBRE A WORDLIST ##########</h2>
-<p>o foi falado acima, se usar a forma padrão do script, levará com certeza não minutos, mas horas até finalizar toda a consulta.</p>
-<p> com certeza irá ter um ótimo resultado, mas se quiser algo mais rápido, crie sua propria wordlist, talvez seja mais rapido o resultado,porém sem muitas novidades.</p>
+<p>Como foi falado acima, se usar a forma padrão do script, levará com certeza não minutos, mas horas até finalizar toda a consulta.</p>
+<p>Com certeza irá ter um ótimo resultado, mas se quiser algo mais rápido, crie sua propria wordlist, talvez seja mais rapido o resultado,porém sem muitas novidades.</p>
