@@ -9,6 +9,7 @@ AcessoRestrito
 adm_auth
 admin
 admin2
+apiClients
 admin4_account
 admin4_colon
 admin/admin
