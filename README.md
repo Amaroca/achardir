@@ -3,7 +3,7 @@
 Script é desenvolvido em Bash, e tem por objetivo varrer um dominio, trazendo os diretórios e arquivos disponiveis.
 
 <h2>###### MODO DE USO ##########</h2>
-
+<p>Ele já inicia criando um diretório com o nome do dominio e dentro dele é criado 2 arquivos, um chamado diretórios onde vai ser gravado todos os diretórios encontrados, em seguida é criado um arquivo chamado arquivos, onde é feito duas consultas para criar o conteúdo desse "arquivos", uma a partir da raiz e uma segunda combinando os diretórios encontrados com a wordlist de arquivos.</p>
 <p>Na sua forma padrão:</p>
   <spam>ex: ./achardir.sh dominio.com.br</spam>
 <p>Nesse caso especifico, teremos a sua execução padrão, onde as 3 wordilists disponiveis por padrão, serão utilizadas.</p>
@@ -33,5 +33,5 @@ Script é desenvolvido em Bash, e tem por objetivo varrer um dominio, trazendo o
 nosso script irá funcionar.</spam>
 
 <h2>############### SOBRE A WORDLIST ##########</h2>
-<p>Como foi falado acima, se usar a forma padrão do script, levará com certeza não minutos, mas horas até finalizar toda a consulta.</p>
-<p>Com certeza irá ter um ótimo resultado, mas se quiser algo mais rápido, crie sua propria wordlist, talvez seja mais rapido o resultado,porém sem muitas novidades.</p>
+<p>Como foi falado acima, se usar a forma padrão do script, levará com certeza muito tempo até finalizar toda a consulta.</p>
+<p><spam>Com certeza irá ter um ótimo resultado, mas se é preferivel você criar sua propria wordlist, talvez seja mais rapido o resultado.<spam/></p>
