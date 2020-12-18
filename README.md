@@ -19,13 +19,13 @@ Script é desenvolvido em Bash, e tem por objetivo varrer um dominio, trazendo o
 
 <h3>############ Primeira forma de uso ######</h3>
 
-<li>1 - No inicio é feito uma consulta na wordlist de diretorios,e na wl de extensões, sendo usada juntamente com o dominio. E através do Curl em sua forma silenciosa, é trazido o status_code, caso seja diferente de 404, no caso do diretório, ele retornará o nome com sucesso.</li>
+<li>1 - No inicio é feito uma consulta na wordlist de diretorios,e na wordlist de extensões, sendo usada juntamente com o dominio. E através do Curl em sua forma silenciosa, é trazido o status_code, caso seja diferente de 404, no caso do diretório, ele retornará o nome com sucesso.</li>
 <li>2 - Depois é feito uma consulta na wordlist de arquivos, e juntamente com o dominio, dominio/arquivo e com uso do curl é trazido a resposta com o status_code.</li>
-<li>3 - Em uma terceira consulta, é feita uma leitura na wl dos diretorios, concatenando com os arquivos e com a wl de extensoes, trazendo o resultado como nos exemplos acima. or isso a demora nas consultas.</i>
+<li>3 - Em uma terceira consulta, é feita uma leitura na wordlist dos diretorios, concatenando com os arquivos e com a wl de extensoes, trazendo o resultado como nos exemplos acima por essa razão a demora nas consultas.</i>
 
 <h3>########### Segundo Modo ##############</h3>
-<li>1 - Você pode optar por usar suas próprias wordlist, a observação é que se for usar uma terá que usar as 3, uma pra diretorios, uma pra arquivos e outra para extensões, podendo aproveitar as ja disponiveis já no sistema.</i>
-    </p>./achardir dominio.com.br dir.txt /usr/share/dirb/wordlist/common.txt ext.txt</p>
+<li>1 - Você pode optar por usar suas próprias wordlist, a observação é que se for usar uma terá que usar as 2, uma pra diretorios, uma pra arquivos, a wordlist de extensões será setado dentro das opções de 0 a 5 como já falado acima.</i>
+    </p>./achardir dominio.com.br /usr/share/dirb/wordlist/small.txt /usr/share/dirb/wordlist/common.txt ext.txt</p>
 <li>2 - a busca é semelhante a primeira forma de uso.</i>
 
 <spam>lgo a ser observado é que mesmo o dominio tendo sido configurado para alguns tipos de consultas por scripts, provavelmente este
