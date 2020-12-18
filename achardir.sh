@@ -35,7 +35,7 @@ echo "https://github.com/faciltech"
 	echo "Escolha um das opcoes de wordlist para extensoes de arquivo"
 	echo "1 - somente php"
 	echo "2 - somente html"
-	echo "3 - somente slq"
+	echo "3 - somente sql"
 	echo "4 - somente txt"
 	echo "5 - All [E BASTANTE DEMORADA, VAI LEVAR HORAS"
 	echo "Digite o numero correspondente: "
@@ -55,7 +55,7 @@ echo "https://github.com/faciltech"
 		echo "Iniciando a coleta de diretorios ..."
 		echo "############ Diretorios Encontrados ##################"
 		echo " "
-if [ "$2" == "" ]; then         #### if 2 
+if [ "$2" == "" ]; then         
         for dir in $(cat ../dir.txt)
         do
                 resposta=$(curl -H "User-Agent: Amaraltool" -s -o /dev/null -w "%{http_code}" "$1"/"$dir")
@@ -76,10 +76,11 @@ if [ "$2" == "" ]; then         #### if 2
 		for ext in $(cat $extensao)
          	do
 			        resp=$(curl -H "User-Agent: Amaraltool" -s -o /dev/null -w "%{http_code}" "$1"/"$arq""$ext")
-                                #echo "$1"/"$arq""$ext = $resp"
+                               # echo "$1"/"$arq""$ext = $resp"
                                 if [ "$resp" != "404" ] && [ "$resp" != "403" ];
                                 then
-                                        echo "Arquivo encontrado => $1/$dir/$arq$ext [$resp]"
+                                        echo "Arquivo encontrado => $1/$arq$ext [$resp]"
+					echo $1/$arq$ext >> arquivos
                                 fi
 		done
 	done
@@ -94,6 +95,7 @@ if [ "$2" == "" ]; then         #### if 2
                                 if [ "$resp" != "404" ] && [ "$resp" != "403" ];
                                 then
                                         echo "Arquivo encontrado => $1/$dir/$arq$ext [$resp]"
+					echo $1/$dir/$arq$ext >> arquivos
                                 fi
 			done
         	done
@@ -119,7 +121,7 @@ else
                 for ext in $(cat $extensao)
                 do
                         resp=$(curl -H "User-Agent: Amaraltool" -s -o /dev/null -w "%{http_code}" "$1"/"$arq""$ext")
-                        echo "$1"/"$arq$ext = $resp"
+                        #echo "$1"/"$arq$ext = $resp"
                         if [ "$resp" != "404" ] && [ "$resp" != "403" ];
                         then
                                 echo "Arquivo encontrado => $1/$arq$ext [$resp]"
