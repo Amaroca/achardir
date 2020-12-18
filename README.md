@@ -8,6 +8,7 @@ Script é desenvolvido em Bash, e tem por objetivo varrer um dominio, trazendo o
   <spam>ex: ./achardir.sh dominio.com.br</spam>
 <p>Nesse caso especifico, teremos a sua execução padrão, onde as 3 wordilists disponiveis por padrão, serão utilizadas.</p>
  <p> A observação é que nessa forma, o tempo não é o importante, pois levará muito tempo até finalizar a consulta, levando em conta  que as 3 wordlists são bem grandes, porém, o resultado é excelente</p>
+  <p>OBS: É imporante saber a linguagem do site analisado, para poder setar a opção numérica correta, do contrário, terá que fazer mais de uma consula, em opção numerica diferente, ou mesmo uilizar a oção FULL, mas é muio demorada, pois ele testa para cada arquivo, uma sequencia de combinação de extensões fazendo com que o processo seja muito demorado.</p>
   <spam>Você terá 5 opçẽs para tipo de arquivos:</spam>
     <li>1 - arquivos em php</li>
     <li>2 - arquivos em html</li>
